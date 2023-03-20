@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <%- include('header'); %>
+    <h4>Insira as suas novas informações abaixo</h4>
+    <form action="/" method="post">
+        <input type="text" placeholder="Insira seu Nome:" id="nome" name="nome" required> <br>
+        <input type="text" placeholder="Insira seu Sobrenome:" id="sobrenome" name="sobrenome" required> <br> 
+        <input type="number" placeholder="Insira dua Idade:" id="idade" name="idade" required> <br>
+        <input type="text" placeholder="Insira seu país:" id="pais" name="pais" required    > <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
