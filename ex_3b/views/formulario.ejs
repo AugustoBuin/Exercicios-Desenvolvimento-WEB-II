@@ -10,10 +10,10 @@
 <body>
     <%- include('header'); %>
     <h4>Insira as suas novas informações abaixo</h4>
-    <form action="/" method="post">
+    <form action="/index" method="post">
         <input type="text" placeholder="Insira seu Nome:" id="nome" name="nome" required> <br>
         <input type="text" placeholder="Insira seu Sobrenome:" id="sobrenome" name="sobrenome" required> <br> 
-        <input type="number" placeholder="Insira dua Idade:" id="idade" name="idade" required> <br>
+        <input type="number" min="0" placeholder="Insira dua Idade:" id="idade" name="idade" required> <br>
         <input type="text" placeholder="Insira seu país:" id="pais" name="pais" required    > <br>
         <button type="submit">Enviar</button>
     </form>
