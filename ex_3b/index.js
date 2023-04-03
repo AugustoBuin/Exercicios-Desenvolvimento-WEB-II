@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 const bodyParser = require('body-parser');
+const PORT = 3000;
 
 // view engine setup
 app.set('view engine', 'ejs');
@@ -14,10 +15,10 @@ app.get('/', (req, res) => {
     var idade = req.body.idade; 
     var pais = req.body.pais; 
 
-    if (nome == undefined) {nome = 'Augusto'}
-    if (sobrenome == undefined) {sobrenome = 'Henrique Buin'}
-    if (idade == undefined) {idade = '20'}
-    if (pais == undefined) {pais = 'Brasil'}
+    if (nome == undefined) {nome = 'undefined'}
+    if (sobrenome == undefined) {sobrenome = ''}
+    if (idade == undefined) {idade = 'undefined'}
+    if (pais == undefined) {pais = 'undefined'}
 
     // console.log(typeof(nome), typeof(sobrenome), typeof(idade), typeof(pais))
 
@@ -34,10 +35,10 @@ app.get('/index', (req, res) => {
     var idade = req.body.idade; 
     var pais = req.body.pais; 
 
-    if (nome == undefined) {nome = 'Augusto'}
-    if (sobrenome == undefined) {sobrenome = 'Henrique Buin'}
-    if (idade == undefined) {idade = '20'}
-    if (pais == undefined) {pais = 'Brasil'}
+    if (nome == undefined) {nome = 'undefined'}
+    if (sobrenome == undefined) {sobrenome = ''}
+    if (idade == undefined) {idade = 'undefined'}
+    if (pais == undefined) {pais = 'undefined'}
     
     res.render('index', {nome: nome, sobrenome: sobrenome, idade: idade, pais: pais})
 });
@@ -48,14 +49,14 @@ app.post('/index', (req, res) => {
     var idade = req.body.idade; 
     var pais = req.body.pais; 
     
-    if (nome == undefined) {nome = 'Augusto'}
-    if (sobrenome == undefined) {sobrenome = 'Henrique Buin'}
-    if (idade == undefined) {idade = '20'}
-    if (pais == undefined) {pais = 'Brasil'}
+    if (nome == undefined) {nome = 'undefined'}
+    if (sobrenome == undefined) {sobrenome = ''}
+    if (idade == undefined) {idade = 'undefined'}
+    if (pais == undefined) {pais = 'undefined'}
 
     res.render('index', {nome: nome, sobrenome: sobrenome, idade: idade, pais: pais})
 });
 
 app.listen(3000, () => {
-    console.log('Servidor Rodando!')
+    console.log(`servidor rodando! http://localhost:${PORT}`)
 });
